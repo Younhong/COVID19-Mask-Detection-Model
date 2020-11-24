@@ -107,7 +107,7 @@ while True:
 	# grab the frame from the threaded video stream and resize it
 	# to have a maximum width of 400 pixels
 	frame = vs.read()
-	frame = imutils.resize(frame, width=400)
+	frame = imutils.resize(frame, width=1100)
 
 	# detect faces in the frame and determine if they are wearing a
 	# face mask or not
@@ -115,15 +115,22 @@ while True:
 
 	# loop over the detected face locations and their corresponding
 	# locations
+	maskCount = 0
+	nonMaskCount = 0
 	for (box, pred) in zip(locs, preds):
 		# unpack the bounding box and predictions
 		(startX, startY, endX, endY) = box
 		(mask, withoutMask) = pred
+		if mask > withoutMask:
+			maskCount += 1
+		else:
+			nonMaskCount += 1
 
 		# determine the class label and color we'll use to draw
 		# the bounding box and text
 		label = "Mask" if mask > withoutMask else "No Mask"
 		color = (0, 255, 0) if label == "Mask" else (0, 0, 255)
+		label2 = "Good Job" if mask > withoutMask else "Warning[Wear Mask]"
 
 		# include the probability in the label
 		label = "{}: {:.2f}%".format(label, max(mask, withoutMask) * 100)
@@ -132,8 +139,18 @@ while True:
 		# frame
 		cv2.putText(frame, label, (startX, startY - 10),
 			cv2.FONT_HERSHEY_SIMPLEX, 0.45, color, 2)
+		cv2.putText(frame, label2, (startX, endY + 20),
+			cv2.FONT_HERSHEY_SIMPLEX, 0.8, color, 2)
 		cv2.rectangle(frame, (startX, startY), (endX, endY), color, 2)
 
+	color2 = (0, 255, 0) if nonMaskCount == 0 else (0, 0, 255)
+	label2 = "{}/{}".format(maskCount, nonMaskCount + maskCount)
+	cv2.putText(frame, label2, (100, 130),
+		cv2.FONT_HERSHEY_SIMPLEX, 0.45, color2, 2)
+
+	label3 = "# of Wearing Masks/# of Detected"
+	cv2.putText(frame, label3, (100, 100),
+		cv2.FONT_HERSHEY_SIMPLEX, 0.45, (255, 0, 0), 2)
 	# show the output frame
 	cv2.imshow("Frame", frame)
 	key = cv2.waitKey(1) & 0xFF

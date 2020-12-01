@@ -39,7 +39,6 @@ def mask_image():
 	# load the input image from disk, clone it, and grab the image spatial
 	# dimensions
 	image = cv2.imread(args["image"])
-	orig = image.copy()
 	(h, w) = image.shape[:2]
 
 	# construct a blob from the image
@@ -49,6 +48,7 @@ def mask_image():
 	# pass the blob through the network and obtain the face detections
 	print("[INFO] computing face detections...")
 	net.setInput(blob)
+	# 순방향으로 dnn 실행하겠다는 의미
 	detections = net.forward()
 
 	# loop over the detections
@@ -59,6 +59,7 @@ def mask_image():
 
 		# filter out weak detections by ensuring the confidence is
 		# greater than the minimum confidence
+		# 기본이 0.5. 0.5 이하로 나오는 건 마스크 착용/미착용 둘 다 아닌 것 같다고 판단할 경우
 		if confidence > args["confidence"]:
 			# compute the (x, y)-coordinates of the bounding box for
 			# the object
@@ -82,7 +83,6 @@ def mask_image():
 			# pass the face through the model to determine if the face
 			# has a mask or not
 			(mask, withoutMask) = model.predict(face)[0]
-
 			# determine the class label and color we'll use to draw
 			# the bounding box and text
 			label = "Mask" if mask > withoutMask else "No Mask"
@@ -99,7 +99,8 @@ def mask_image():
 
 	# show the output image
 	cv2.imshow("Output", image)
-	cv2.waitKey(0)
-	
+	cv2.waitKey(10000)
+	exit()
+
 if __name__ == "__main__":
 	mask_image()

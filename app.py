@@ -8,7 +8,6 @@ from tensorflow.keras.preprocessing.image import img_to_array
 from tensorflow.keras.models import load_model
 import detect_mask_image
 
-
 def mask_image():
     global RGB_img
     # load our serialized face detector model from disk

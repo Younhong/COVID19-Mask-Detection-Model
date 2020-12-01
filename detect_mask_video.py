@@ -121,6 +121,7 @@ while True:
 		# unpack the bounding box and predictions
 		(startX, startY, endX, endY) = box
 		(mask, withoutMask) = pred
+
 		if mask > withoutMask:
 			maskCount += 1
 		else:
@@ -144,12 +145,12 @@ while True:
 		cv2.rectangle(frame, (startX, startY), (endX, endY), color, 2)
 
 	color2 = (0, 255, 0) if nonMaskCount == 0 else (0, 0, 255)
-	label2 = "{}/{}".format(maskCount, nonMaskCount + maskCount)
-	cv2.putText(frame, label2, (100, 130),
+	label3 = "{}/{}".format(maskCount, nonMaskCount + maskCount)
+	cv2.putText(frame, label3, (100, 130),
 		cv2.FONT_HERSHEY_SIMPLEX, 0.45, color2, 2)
 
-	label3 = "# of Wearing Masks/# of Detected"
-	cv2.putText(frame, label3, (100, 100),
+	label4 = "# of Wearing Masks/# of Detected"
+	cv2.putText(frame, label4, (100, 100),
 		cv2.FONT_HERSHEY_SIMPLEX, 0.45, (255, 0, 0), 2)
 	# show the output frame
 	cv2.imshow("Frame", frame)

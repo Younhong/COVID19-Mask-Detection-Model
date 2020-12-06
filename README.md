@@ -78,33 +78,33 @@ $ mkvirtualenv test
 
 3. Now, run the following command in your Terminal/Command Prompt to install the libraries required
 ```
-$ pip3 install -r requirements.txt
+$ pip install -r requirements.txt
 ```
 
 ## :bulb: Working
 
 1. Open terminal. Go into the cloned project directory and type the following command:
 ```
-$ python3 train_mask_detector.py --dataset dataset
+$ python train_mask_detector.py --dataset dataset
 ```
 
 2. To detect face masks in an image type the following command: 
 ```
-$ python3 detect_mask_image.py --image images/pic1.jpeg
+$ python detect_mask_image.py --image images/pic1.jpeg
 ```
 
 3. To detect face masks in real-time video streams type the following command:
 ```
-$ python3 detect_mask_video.py 
+$ python detect_mask_video.py 
 ```
 ## :key: Results
 
 #### Our model gave 93% accuracy for Face Mask Detection after training via <code>tensorflow-gpu==2.0.0</code>
 
-![](https://github.com/chandrikadeb7/Face-Mask-Detection/blob/master/Readme_images/Screenshot%202020-06-01%20at%209.48.27%20PM.png)
+![](https://github.com/Younhong/COVID19-Mask-Detection-Model/blob/master/snapshot/result-report.png)
 
 #### We got the following accuracy/loss training curve plot
-![](https://github.com/chandrikadeb7/Face-Mask-Detection/blob/master/plot.png)
+![](https://github.com/younhong/COVID19-Mask-Detection-Model/blob/master/plot.png)
 
 ## Streamlit app
 

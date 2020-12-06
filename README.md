@@ -31,9 +31,10 @@ In the present scenario due to Covid-19, there is no efficient face mask detecti
 [![Already deployed version](https://raw.githubusercontent.com/vasantvohra/TrashNet/master/hr.svg)](https://face-mask--detection-app.herokuapp.com/)
 
 
+<p align="center"><img src="https://github.com/younhong/COVID19-Mask-Detection-Model/blob/master/Readme_images/Screen%20Shot%202020-05-14%20at%208.49.06%20PM.png" width="700" height="400"></p>
 
-<p align="center"><img src="https://github.com/chandrikadeb7/Face-Mask-Detection/blob/master/Readme_images/Screen%20Shot%202020-05-14%20at%208.49.06%20PM.png" width="700" height="400"></p>
-
+## :hourglass: New Project Video
+:movie_camera: [YouTube Demo Link](https://www.youtube.com/playlist?list=PLoA6RcXHJA13kr0_6dc5cqQ2RNQQraJdN)
 
 ## :warning: TechStack/framework used
 
@@ -57,18 +58,18 @@ This dataset consists of __3835 images__ belonging to two classes:
 
 The images used were real images of faces wearing masks. The images were collected from the following sources:
 
-* __Bing Search API__ ([See Python script](https://github.com/chandrikadeb7/Face-Mask-Detection/blob/master/search.py))
+* __Bing Search API__ ([See Python script](https://github.com/younhong/COVID19-Mask-Detection-Model/blob/master/search.py))
 * __Kaggle datasets__ 
 * __RMFD dataset__ ([See here](https://github.com/X-zhangyang/Real-World-Masked-Face-Dataset))
 
 ## :key: Prerequisites
 
-All the dependencies and required libraries are included in the file <code>requirements.txt</code> [See here](https://github.com/chandrikadeb7/Face-Mask-Detection/blob/master/requirements.txt)
+All the dependencies and required libraries are included in the file <code>requirements.txt</code> [See here](https://github.com/younhong/COVID19-Mask-Detection-Model/blob/master/requirements.txt)
 
 ## 🚀&nbsp; Installation
 1. Clone the repo
 ```
-$ git clone https://github.com/chandrikadeb7/Face-Mask-Detection.git
+$ git clone https://github.com/younhong/COVID19-Mask-Detection-Model.git
 ```
 
 2. Change your directory to the cloned repo and create a Python virtual environment named 'younhong'(You may choose any name instead of 'younhong')
@@ -101,7 +102,7 @@ $ python detect_mask_video.py
 
 #### Our model gave 99% accuracy for Face Mask Detection after training via <code>tensorflow-gpu==2.0.0</code>
 
-![](https://github.com/Younhong/COVID19-Mask-Detection-Model/blob/master/snapshot/result-report.png)
+![](https://github.com/younhong/COVID19-Mask-Detection-Model/blob/master/snapshot/result-report.png)
 
 #### We got the following accuracy/loss training curve plot
 ![](https://github.com/younhong/COVID19-Mask-Detection-Model/blob/master/plot.png)

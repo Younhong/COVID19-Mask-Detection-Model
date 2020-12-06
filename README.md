@@ -66,23 +66,11 @@ The images used were real images of faces wearing masks. The images were collect
 
 All the dependencies and required libraries are included in the file <code>requirements.txt</code> [See here](https://github.com/younhong/COVID19-Mask-Detection-Model/blob/master/requirements.txt)
 
-## 🚀&nbsp; Installation
-1. Clone the repo
-```
-$ git clone https://github.com/younhong/COVID19-Mask-Detection-Model.git
-```
+## 🚀&nbsp; About This Project
+This project has been changed from original source.
+To look at detail explanation, please read [here](https://github.com/Younhong/COVID19-Mask-Detection-Model/blob/master/Mask-Detector-AI-Model.ipynb)
 
-2. Change your directory to the cloned repo and create a Python virtual environment named 'younhong'(You may choose any name instead of 'younhong')
-```
-$ mkvirtualenv younhong
-```
-
-3. Now, run the following command in your Terminal/Command Prompt to install the libraries required
-```
-$ pip install -r requirements.txt
-```
-
-## :bulb: Working
+## :bulb: Training & Testing
 
 1. Open terminal. Go into the cloned project directory and type the following command:
 ```

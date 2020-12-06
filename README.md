@@ -68,7 +68,7 @@ All the dependencies and required libraries are included in the file <code>requi
 
 ## 🚀&nbsp; About This Project
 This project has been changed from original source.
-To look at detail explanation, please read [here](https://github.com/Younhong/COVID19-Mask-Detection-Model/blob/master/Mask-Detector-AI-Model.ipynb)
+To look at detail explanation, please read [this page](https://github.com/Younhong/COVID19-Mask-Detection-Model/blob/master/Mask-Detector-AI-Model.ipynb)
 
 ## :bulb: Training & Testing
 

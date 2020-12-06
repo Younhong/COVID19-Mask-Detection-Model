@@ -71,9 +71,9 @@ All the dependencies and required libraries are included in the file <code>requi
 $ git clone https://github.com/chandrikadeb7/Face-Mask-Detection.git
 ```
 
-2. Change your directory to the cloned repo and create a Python virtual environment named 'test'
+2. Change your directory to the cloned repo and create a Python virtual environment named 'younhong'(You may choose any name instead of 'younhong')
 ```
-$ mkvirtualenv test
+$ mkvirtualenv younhong
 ```
 
 3. Now, run the following command in your Terminal/Command Prompt to install the libraries required
@@ -99,7 +99,7 @@ $ python detect_mask_video.py
 ```
 ## :key: Results
 
-#### Our model gave 93% accuracy for Face Mask Detection after training via <code>tensorflow-gpu==2.0.0</code>
+#### Our model gave 99% accuracy for Face Mask Detection after training via <code>tensorflow-gpu==2.0.0</code>
 
 ![](https://github.com/Younhong/COVID19-Mask-Detection-Model/blob/master/snapshot/result-report.png)
 

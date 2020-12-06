@@ -104,7 +104,7 @@ $ python detect_mask_video.py
 ![](https://github.com/Younhong/COVID19-Mask-Detection-Model/blob/master/snapshot/result-report.png)
 
 #### We got the following accuracy/loss training curve plot
-![](https://github.com/younhong/COVID19-Mask-Detection-Model//blob/master/plot.png)
+![](https://github.com/younhong/COVID19-Mask-Detection-Model/blob/master/plot.png)
 
 ## Streamlit app
 

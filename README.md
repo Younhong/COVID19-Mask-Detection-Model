@@ -30,7 +30,7 @@ In the present scenario due to Covid-19, there is no efficient face mask detecti
 [![Already deployed version](https://raw.githubusercontent.com/vasantvohra/TrashNet/master/hr.svg)](https://face-mask--detection-app.herokuapp.com/)
 
 
-<p align="center"><img src="https://github.com/younhong/COVID19-Mask-Detection-Model/blob/master/Readme_images/Screen%20Shot%202020-05-14%20at%208.49.06%20PM.png" width="700" height="400"></p>
+<p align="center"><img src="https://github.com/younhong/COVID19-Mask-Detection-Model/blob/master/Readme_images/Screenshot.png" width="700" height="400"></p>
 
 ## :hourglass: New Project Video
 :movie_camera: [YouTube Demo Link](https://www.youtube.com/playlist?list=PLoA6RcXHJA13kr0_6dc5cqQ2RNQQraJdN)
